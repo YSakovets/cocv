@@ -2,7 +2,8 @@ cff-version: 1.2.0
 message: "If you use this methodology or implementation, please cite it as below."
 title: "Chain of Custody Verification (CoCV): a methodology for detecting silent protection failures in consumer privacy and security software"
 version: 0.1.0
-date-released: 2026-09-13
+doi: 10.5281/zenodo.22736556
+date-released: 2026-02-13
 authors:
   - family-names: Sakovets
     given-names: Yevheniia
