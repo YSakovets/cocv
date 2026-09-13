@@ -10,7 +10,7 @@ from .observation import Observation
 from .reconcile import ChainResult, Divergence, reconcile
 from .report import to_dict, to_json, to_text
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __all__ = [
     "Chain", "Handoff", "Layer", "VERIFICATION_POINTS",
     "Observation", "ChainResult", "Divergence", "reconcile",
