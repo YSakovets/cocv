@@ -1,6 +1,10 @@
 # Changelog
 
-## 0.1.0 (2026-09-13)
+# 0.1.1 (2026-09-13)
+
+Republished for archival.
+
+## 0.1.0 (2026-02-13)
 
 First public draft.
 
