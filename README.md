@@ -2,6 +2,9 @@
 
 A cross-layer verification methodology for consumer privacy and security software, with a reference implementation.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22736556.svg)](https://doi.org/10.5281/zenodo.22736556)
+
+
 CoCV detects **silent protection failures**: cases where software reports to the user that a protective operation succeeded ("your data was removed", "your files were erased", "your password is encrypted") while the operation did not, in fact, complete.
 
 Methodology specification: **https://yevheniiasakovets.com/cocv/**
@@ -82,7 +85,7 @@ The reconciler decides whether and where the chain broke. That is deterministic.
 
 ## Status
 
-Version 0.1, working draft. The verification points and the reference implementation are open for review. Corrections, counterexamples, and reports of use on real systems are welcome as issues or pull requests. Teams that have applied the method and are willing to be listed can open an issue titled "Adoption".
+Version 0.1.1, public release. The methodology is applied in production consumer privacy software; this repository is its generalized, employer-independent form. Complete and tested. Open for review and adoption. 
 
 ## Independence
 
@@ -93,7 +96,7 @@ This methodology and implementation were developed independently by the author, 
 ```
 Sakovets, Y. (2026). Chain of Custody Verification (CoCV): a methodology for
 detecting silent protection failures in consumer privacy and security software,
-v0.1. https://github.com/GITHUB_USERNAME/cocv
+v0.1.1. https://doi.org/10.5281/zenodo.22736556
 ```
 
 See `CITATION.cff`.
