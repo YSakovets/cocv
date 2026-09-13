@@ -1,0 +1,44 @@
+# Chain definition for the synthetic personal-data removal service.
+# One protective claim, traced end to end.
+
+name: personal-data-removal
+claim: "Your personal information has been removed from data broker sites."
+
+layers:
+  - name: interface
+    description: Form where the user submits name, email, and address
+  - name: api
+    description: Accepts the payload and forwards it
+  - name: backend
+    description: Builds one removal request per broker and records aggregate status
+  - name: brokers
+    description: External parties. Ground truth for whether the record still exists
+  - name: state
+    description: Stored status of the operation
+  - name: interface_result
+    description: What the user is shown
+
+handoffs:
+  - from: interface
+    to: api
+    points: [V1]
+    carry: { name: name, email: email, address: address }
+
+  - from: api
+    to: backend
+    points: [V1, V7]
+    carry: { name: name, email: email, address: address }
+
+  - from: backend
+    to: brokers
+    points: [V2, V3, V4, V6]
+
+  - from: brokers
+    to: state
+    points: [V4]
+
+  - from: state
+    to: interface_result
+    points: [V5]
+
+whole_chain_points: [V8, V9]
