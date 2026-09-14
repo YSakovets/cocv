@@ -1,10 +1,16 @@
 # Chain of Custody Verification (CoCV)
+
 ## Standards Alignment and Contribution Statement
 
 **Method:** Chain of Custody Verification (CoCV)
 **Defect class addressed:** Silent protection failures
-**Version:** Draft 0.1
-**Status:** Working draft. Characteristic definitions below are paraphrased from publicly available summaries and must be verified against the licensed standard text before publication.
+**Version:** 0.1.1
+**Last revised:** 14 September 2026
+**Author:** Yevheniia Sakovets
+**Permanent identifier:** https://doi.org/10.5281/zenodo.22736556
+**Licence:** CC BY 4.0
+
+*Standards are referenced by characteristic name and edition. No text from ISO or IEEE standards is reproduced in this document.*
 
 ---
 
@@ -48,8 +54,6 @@ Each numbered verification point below is checked at one or more of these transi
 | V8 | Persistence over time | The effect of the operation holds; data does not reappear and suppression is not silently lost |
 | V9 | Telemetry fidelity | Events and metrics reported about the operation match what actually occurred |
 | V10 | Recovery integrity | After a failed transition, the operation resumes without data loss or duplication |
-
-*(Adjust, add to, or cut this list to match actual practice. Every row must correspond to something genuinely verified.)*
 
 ---
 
@@ -146,10 +150,3 @@ This is the claim the mapping supports, stated in one paragraph:
 > ISO/IEC 25010 defines functional correctness, integrity, and accountability as required product quality characteristics. ISO/IEC 25012 defines accuracy, consistency, and traceability as required data quality characteristics. ISO/IEC/IEEE 29119 defines the processes and documentation by which software is tested and catalogues the techniques available for designing tests. None of the three provides a technique for verifying that a protective operation on personal data completed end to end across independent system layers, which is precisely the condition on which these characteristics depend in consumer privacy and security software. Chain of Custody Verification is proposed to fill that gap: it conforms to the process and documentation model of 29119, verifies characteristics named in 25010 and 25012, and supplies the technique those standards assume but do not define.
 
 ---
-
-## 7. Working notes
-
-- **Verify against licensed text.** All three standards are paywalled. Characteristic names and definitions above are drawn from public summaries. Before publication, confirm each against the standard itself, and cite edition and year (ISO/IEC 25010:2023 in particular, as many online sources still describe the superseded 2011 edition with eight characteristics).
-- **Map only what is verified.** Rows that are aspirational rather than practised weaken the document. Fewer, defensible rows beat comprehensive coverage.
-- **Keep the reference implementation independent.** Develop it as a generalisation of the method, without employer code, data, or internal artefacts.
-- **On NIST SP 800-218 (SSDF).** SSDF addresses secure development practices intended to reduce vulnerabilities introduced during development. CoCV addresses post-release verification of operational behaviour. The overlap is contextual rather than structural, and no attribute mapping is offered here. SSDF may be cited narratively in connection with Executive Order 14306, but should not be presented as a mapped standard.
