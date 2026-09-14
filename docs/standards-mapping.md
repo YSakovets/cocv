@@ -145,8 +145,8 @@ Nearest existing relatives, and why they are insufficient:
 
 ## 6. Contribution statement
 
-This is the claim the mapping supports, stated in one paragraph:
+ISO/IEC 25010:2023 names functional correctness as a sub-characteristic of functional suitability, and integrity and accountability as sub-characteristics of security. ISO/IEC 25012:2008 names accuracy, consistency and traceability among the required quality characteristics of data. ISO/IEC/IEEE 29119 defines the processes and documentation by which software is tested, and its Part 4 catalogues the techniques available for designing tests.
 
-> ISO/IEC 25010 defines functional correctness, integrity, and accountability as required product quality characteristics. ISO/IEC 25012 defines accuracy, consistency, and traceability as required data quality characteristics. ISO/IEC/IEEE 29119 defines the processes and documentation by which software is tested and catalogues the techniques available for designing tests. None of the three provides a technique for verifying that a protective operation on personal data completed end to end across independent system layers, which is precisely the condition on which these characteristics depend in consumer privacy and security software. Chain of Custody Verification is proposed to fill that gap: it conforms to the process and documentation model of 29119, verifies characteristics named in 25010 and 25012, and supplies the technique those standards assume but do not define.
+None of the three supplies a technique for verifying that a protective operation on personal data completed end to end across independent system layers. In consumer privacy and security software, that condition is what the named characteristics rest on: when a handoff between layers fails silently, every layer still satisfies its own specification, and the attributes these standards require are violated without any test reporting it.
 
----
+Chain of Custody Verification fills that gap. It conforms to the process and documentation model of ISO/IEC/IEEE 29119, verifies characteristics named in ISO/IEC 25010:2023 and ISO/IEC 25012:2008, and supplies the technique those standards assume but do not define: one whose coverage items are the transitions of user data between independent layers, evaluated against the protective claim the product makes to the user.
